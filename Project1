@@ -61,8 +61,12 @@ Jenkins is a CI CD tool that help to automate all activities related to building
       10- the path of the war file is availaible. You can go to this path with cd, and with ls, we will see the webapp.war. Our artifact is avalaible 
  
         E - INTEGRATE TOMCAT
-        
-    
+       In the CICD process, Tomcat is installed on the QA and PROD environnement. To install Tomcat, follow the steps below:
+       1- Create a new EC2 instance name Tomcatserver
+       2- Go to google and tape tomcat download. In our case, we will download tomcat 9. Go to opt directory to store all the librairies of tomcat cd /opt. Now, copy the link of the tar file and paste it in the CLI : wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
+       3- The apache tomcat file is availaible and we have to unzip it. Execute the command tar -xvzf apache-tomcat-9.0.70.tar.gz. and ls. the unzip file is availaible
+       4- Move the apache file in a new tomcat directory by the command mv apache-tomcat-9.0.70 tomcat. Go to the tomcat directory and list the content with ls. We will see a bin directory, go in this directory with cd /bin, list the contents  
+
     
     
 
